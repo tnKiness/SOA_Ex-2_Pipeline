@@ -1,8 +1,9 @@
 package com.example.pipelineex.core;
 
+import com.example.pipelineex.core.entities.IMessage;
 import com.google.gson.Gson;
 
-public class Message {
+public class Message implements IMessage {
     private InvoiceInfo invoiceInfo;
     private String fileContent;
 
