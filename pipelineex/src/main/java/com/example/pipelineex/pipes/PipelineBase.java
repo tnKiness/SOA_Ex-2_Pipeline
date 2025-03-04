@@ -3,8 +3,6 @@ package com.example.pipelineex.pipes;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.pipelineex.core.entities.IFilter;
-
 public abstract class PipelineBase<T> {
     protected List<IFilter<T>> filters = new ArrayList<>();
 

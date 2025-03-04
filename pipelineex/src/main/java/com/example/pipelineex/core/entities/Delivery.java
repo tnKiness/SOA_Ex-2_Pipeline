@@ -1,14 +1,14 @@
-package com.example.pipelineex.core;
+package com.example.pipelineex.core.entities;
 
 import com.google.gson.Gson;
 
-public class Note {
+public class Delivery {
     private long noteId;
     private String note;
     private String deliveryAdd;
     private boolean isDelivery;
 
-    public Note(long noteId, String note, String deliveryAdd, boolean isDelivery) {
+    public Delivery(long noteId, String note, String deliveryAdd, boolean isDelivery) {
         this.noteId = noteId;
         this.note = note;
         this.deliveryAdd = deliveryAdd;
@@ -49,7 +49,7 @@ public class Note {
     
     @Override
     public String toString() {
-        return "Note [noteId=" + noteId + ", note=" + note + ", deliveryAdd=" + deliveryAdd + ", isDelivery="
+        return "Delivery [noteId=" + noteId + ", note=" + note + ", deliveryAdd=" + deliveryAdd + ", isDelivery="
                 + isDelivery + "]";
     }
 

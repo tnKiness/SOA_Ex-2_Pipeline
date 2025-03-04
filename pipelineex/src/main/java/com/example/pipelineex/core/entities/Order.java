@@ -1,28 +1,28 @@
-package com.example.pipelineex.core;
+package com.example.pipelineex.core.entities;
 
 import com.google.gson.Gson;
 
-public class Invoice {
-    private long invoiceId;
+public class Order {
+    private long orderId;
     private long custId;
     private long productId;
     private long quantity;
     private String description;
     
-    public Invoice(long invoiceId, long custId, long productId, long quantity, String description) {
-        this.invoiceId = invoiceId;
+    public Order(long orderId, long custId, long productId, long quantity, String description) {
+        this.orderId = orderId;
         this.custId = custId;
         this.productId = productId;
         this.quantity = quantity;
         this.description = description;
     }
 
-    public long getInvoiceId() {
-        return invoiceId;
+    public long getOrderId() {
+        return orderId;
     }
 
-    public void setInvoiceId(long invoiceId) {
-        this.invoiceId = invoiceId;
+    public void setOrderId(long orderId) {
+        this.orderId = orderId;
     }
 
     public long getCustId() {
@@ -59,7 +59,7 @@ public class Invoice {
 
     @Override
     public String toString() {
-        return "Invoice [invoiceId=" + invoiceId + ", custId=" + custId + ", productId=" + productId + ", quantity="
+        return "Order [orderId=" + orderId + ", custId=" + custId + ", productId=" + productId + ", quantity="
                 + quantity + ", description=" + description + "]";
     }
 
