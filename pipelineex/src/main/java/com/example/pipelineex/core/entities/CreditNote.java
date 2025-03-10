@@ -1,4 +1,4 @@
-package com.example.pipelineex.core;
+package com.example.pipelineex.core.entities;
 
 import com.google.gson.Gson;
 

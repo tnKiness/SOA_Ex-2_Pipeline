@@ -1,35 +1,36 @@
-package com.example.pipelineex.core;
+package com.example.pipelineex.core.entities;
 
 import java.util.List;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 
-public class InvoiceInfo {
-    private List<Invoice> invoices;
-    private List<Note> notes;
+public class OrderInfo {
+    private List<Order> orders;
+    @SerializedName("delivery") private List<Delivery> notes;
     private List<Payment> payments;
     private List<CreditNote> creditNotes;
 
-    public InvoiceInfo(List<Invoice> invoices, List<Note> notes, List<Payment> payments, List<CreditNote> creditNotes) {
-        this.invoices = invoices;
+    public OrderInfo(List<Order> orders, List<Delivery> notes, List<Payment> payments, List<CreditNote> creditNotes) {
+        this.orders = orders;
         this.notes = notes;
         this.payments = payments;
         this.creditNotes = creditNotes;
     }
 
-    public List<Invoice> getInvoices() {
-        return invoices;
+    public List<Order> getOrders() {
+        return orders;
     }
 
-    public void setInvoices(List<Invoice> invoices) {
-        this.invoices = invoices;
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
-    public List<Note> getNotes() {
+    public List<Delivery> getNotes() {
         return notes;
     }
 
-    public void setNotes(List<Note> notes) {
+    public void setNotes(List<Delivery> notes) {
         this.notes = notes;
     }
 
@@ -51,7 +52,7 @@ public class InvoiceInfo {
 
     @Override
     public String toString() {
-        return "InvoiceInfo [invoices=" + invoices + ", notes=" + notes + ", payments=" + payments + ", creditNotes="
+        return "OrderInfo [orders=" + orders + ", notes=" + notes + ", payments=" + payments + ", creditNotes="
                 + creditNotes + "]";
     }
     
